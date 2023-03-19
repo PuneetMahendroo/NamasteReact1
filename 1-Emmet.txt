@@ -1,0 +1,88 @@
+What is Emmet?
+Emmet (formerly Zen Coding) is a set of plug-ins for text editors that allow for high-speed coding and editing in HTML, XML, XSLT, and other structured code formats via content assist.
+With Emmet you can quickly write a bunch of code, wrap code with new tags, quickly traverse and select important code parts and more.
+Emmet is primarily independent from any text editor, as the engine works directly with text rather than with any particular software.
+Emmet is open sourced under the MIT License.
+Emmet is a word that originally meant ant, a small insect that can carry over 50 times of its weight. This word is also similar to "emit," which is basically what Emmet does when it expands abbreviations.
+Emmet uses a specific syntax in order to expand small snippets of code, similar to CSS selectors, into full-fledged HTML code.
+
+What is CDN? Why do we use it?
+A content delivery network (CDN) is a geographically distributed group of servers that caches content close to end users. A CDN allows for the quick transfer of assets needed for loading Internet content, including HTML pages, JavaScript files, stylesheets, images, and videos. The popularity of CDN services continues to grow, and today the majority of web traffic is served through CDNs, including traffic from major sites like Facebook, Netflix, and Amazon. CDNs give users a good experience.
+We use it as, they can save content providers money by preventing excessive use of expensive international bandwidth. CDNs can also accommodate large numbers of users, spreading the load across the network to make sure there’s no denial of service. That also means CDNs provide protections against deliberate Distributed Denial-of-Service (DDoS) attacks.
+In addition, CDNs provide a way to limit content to areas where the content is licensed. It’s as easy as limiting locally-hosted content to what’s licensed for that region.
+
+Difference between a Library and Framework?
+
+1)Definition:
+Libraries provide developers with predefined functions and classes to make their work easier and boost the development process.	
+Framework, on the other hand, is like the foundation upon which developers build applications for specific platforms. 
+2)Inversion of Control:
+By using a library, you can control the flow of the application and call the library. 	
+In contrast, when you use a framework, the control is inverted, i.e., the framework controls the flow and calls your code.
+3)Collection:
+Generally, libraries are a collection of helper modules, objects, classes, functions, message templates, pre-written code, etc.	
+Frameworks consist of a lot of APIs, compilers, toolsets, support programs, libraries, etc.
+4)Code Modification:
+Codes in libraries are geared toward a particular program or to solve a specific development problem. Therefore, developers must modify library code to meet their needs.	
+Despite the fact that frameworks generate new codes for developers. These codes cannot be altered or modified later. Unlike libraries, frameworks do not allow users to modify their pre-written codes, so you don’t have to worry about deleting or changing them.
+5)Scope:
+It is possible to call a library out of context. You may use the library wherever you see fit in your code.	
+On the other hand, you can only call and use what belongs to a Framework within the same Framework. 
+6)Complexity:
+Having a library means understanding the functionality of each method, and it isn’t easy to create complex interactions since you need to call many methods to get the desired results. 	
+Frameworks, on the other hand, embody the basic flow, and since plugins need to be added to code, it is easier to do the right modification.
+7)Performance:
+Less code is required to build libraries, which leads to faster loading times and better performance.	
+Developing a framework requires a lot of coding, which increases loading times and decreases performance.
+8)Usage:
+The purpose of libraries is to perform a defined and specific task. Eg: Image manipulation, network protocols, math operations, etc.	
+Frameworks can be used for performing a wide range of tasks. Among these are Web application systems, plug-in managers, GUI systems, and so on.
+9)Existing Projects:
+You can integrate libraries seamlessly into existing projects to add functionality. 	
+Incorporating frameworks seamlessly into an existing project is impossible. Instead, frameworks should be used when starting a new project.
+10)Examples:
+Library: JQuery, React JS, etc.	
+Framework: Spring, NodeJS, AngularJS, Vue JS, etc.
+
+
+Why is React known as React?
+React is called "React" because of its core feature, which is its ability to "react" or respond dynamically to changes in data. React was originally created by Facebook in 2011 for use in their own web applications, and it was released as an open-source project in 2013.
+The name "React" also reflects the fact that the library is built around the concept of a unidirectional data flow, where changes in data flow down through the component hierarchy, triggering updates and re-renders as necessary. This approach helps to avoid common issues with two-way data binding, such as performance problems and hard-to-debug code.
+
+
+What is crossorigin in script tag?
+The crossorigin attribute on a <script> tag specifies that CORS is supported when loading an external script file from a third party server or domain. CORS is a standard mechanism used to retrieve files from other domains.
+An <script> with a crossorigin attribute. With this attribute, the script element supports CORS. No credentials are sent when the script file is retrieved. The crossorigin attribute sets the mode of the request to an HTTP CORS Request. Web pages often make requests to load resources on other servers. Here is where CORS comes in.
+A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) from another domain.
+CORS is used to manage cross-origin requests. CORS stands for Cross-Origin Resource Sharing, and is a mechanism that allows resources on a web page to be requested from another domain outside their own domain. It defines a way of how a browser and server can interact to determine whether it is safe to allow the cross-origin request. CORS allows servers to specify who can access the assets on the server, among many other things.
+
+What is diference between React and ReactDOM
+The react package holds the react source for components, state, props and all the code. 
+The react-dom package as the name implies is the glue between React and the DOM. Often, you will only use it for one single thing: mounting your application to the index.html file with ReactDOM.render().
+React library is responsible for creating views and ReactDOM library is responsible to actually render UI in the browser.
+React: https://cdnjs.com/libraries/react , ReactDOM: https://cdnjs.com/libraries/react-dom 
+React is a library that is specifically designed to interact with DOM for us. From now onwards we don’t update DOM directly instead we’re going to tell react to update the DOM for us. React will take care of rendering and reconciling the element for us through the command we give to react. 
+The React element is the smallest entity. The React element is just a JavaScript object that describes the DOM element in memory. We can create a React element using React’s createElement method. Once you’ve created the React element. Then you want to see it in the Browser. But Browser doesn’t understand the React element. ReactDOM is the middleman that renders the React element in the browser. ReactDOM comes with some useful methods but the method in which we are interested is render. It takes 2 parameters describe as what(element you want to render) and where(the location where you want to render).
+The reason React and ReactDOM were split into two libraries was due to the arrival of React Native (A react platform for mobile development). React components are such a great way to organize UI that it has now spread to mobile to react is used in web and in mobile. react-dom is used only in web apps.
+
+What is difference between react.development.js and react.production.js files via CDN?
+Development build runs the code as a Development environment and it is very slow. The production environment executes the code and is used by developers and QA people.
+1.	Development:
+Generating Source Maps files for CSS, and helping developers to debug the code about original files.
+Hot reloading enables you to reload changes without restarting the server.
+Debugger available to debug the code in the browser console.
+It creates a single bundle.js file.
+Enable React Developer tools.
+React DevTools Profiler.
+2.	Production:
+It has separate bundle files for app and vendor instead of a single bundle file.
+Minification and compression of javascript and HTML resources to reduce the size of a file.
+Source Map can be disabled at runtime to reduce the size of the code.
+Also, Gzipping code to compress and reduce the size.
+
+What is async and defer?
+ 
+JavaScript files with the async attribute will run in no particular order as soon as they're loaded, whereas defer, resources run in sequence (in the order they appear in the HTML) toward the end of the initial loading process, right before the DOMContentLoaded event.
+The defer attribute tells the browser not to wait for the script. Instead, the browser will continue to process the HTML, build DOM. The script loads “in the background”, and then runs when the DOM is fully built. Scripts with defer never block the page. The page content shows up immediately. DOMContentLoaded event handler waits for the deferred script. It only triggers when the script is downloaded and executed.
+Async scripts load in the background and run when ready. The DOM and other scripts don’t wait for them, and they don’t wait for anything. A fully independent script that runs when loaded. The browser doesn’t block on async scripts (like defer). Other scripts don’t wait for async scripts, and async scripts don’t wait for them. DOMContentLoaded and async scripts don’t wait for each other. DOMContentLoaded may happen both before an async script (if an async script finishes loading after the page is complete)…or after an async script (if an async script is short or was in HTTP-cache).
+
